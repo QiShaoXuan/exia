@@ -12,10 +12,25 @@
     textarea {
       /*opacity: 0;*/
     }
+    .container {
+      display: flex;
+    }
+    .wrapper {
+      position: relative;
+    }
+    textarea {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
   </style>
   <body>
-    <textarea id="" cols="30" rows="10"></textarea>
-    <div class="content"></div>
+    <div class="container">
+      <div class="wrapper">
+        <textarea></textarea>
+        <div class="content"></div>
+      </div>
+    </div>
   </body>
   <script>
     const textarea = document.querySelector("textarea");
