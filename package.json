@@ -1,10 +1,10 @@
 {
   "name": "exia",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "bin": {
-    "exia": "bin/index.js"
+    "exiat": "bin/exia.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,6 +21,11 @@
   "homepage": "https://github.com/QiShaoXuan/exia#readme",
   "dependencies": {
     "chalk": "^4.1.0",
-    "figlet": "^1.5.0"
+    "figlet": "^1.5.0",
+    "fs-extra": "^9.0.1",
+    "js-beautify": "^1.11.0"
+  },
+  "engines": {
+    "node": ">=13.0.0"
   }
 }

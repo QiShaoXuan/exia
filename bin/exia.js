@@ -7,12 +7,19 @@ async function checkCliVersion() {
   try {
     console.log(figlet.textSync("-- EXIA --"));
   } catch (e) {}
-
   commanders();
 }
 
 checkCliVersion().catch(e => {
   console.log(chalk.red("初始化失败"));
-  console.log(e);
-  process.exit(1);
+  console.log(chalk.yellow("检查版本："));
+  Promise.all([
+    require("../lib/checkVersion").checkNodeVersion(),
+    require("../lib/checkVersion").checkExiaVersion()
+  ]).then(() => {
+    console.log(chalk.red("报错信息："));
+    console.log(e);
+
+    process.exit(1);
+  });
 });
