@@ -35,7 +35,6 @@ module.exports = async () => {
       const cwd = options.cwd || process.cwd();
       const inCurrent = projectName === ".";
       const targetDir = path.resolve(cwd, projectName || ".");
-      console.log("111");
 
       if (fs.existsSync(targetDir)) {
         if (options.force) {
