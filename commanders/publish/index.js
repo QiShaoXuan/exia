@@ -7,7 +7,7 @@ const git = simpleGit();
 const inquirer = require("inquirer");
 const logSymbols = require("log-symbols");
 
-modules.exports = async () => {
+module.exports = async () => {
   program
     .command("publish")
     .description("发布项目")
