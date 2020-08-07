@@ -2,7 +2,8 @@ const program = require("commander");
 
 const commanders = {
   config: require("./config"),
-  add: require("./add")
+  add: require("./add"),
+  publish: require("./publish")
   // create: require("./create"),
   // build: require("./build"),
   // download: require("./download"),
