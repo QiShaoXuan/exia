@@ -1,6 +1,6 @@
 {
   "name": "exia",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "main": "bin/exia.js",
   "bin": {
