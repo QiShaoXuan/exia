@@ -8,17 +8,15 @@ const minimist = require("minimist");
 const cleanArgs = require("../../lib/cleanArgs");
 const config = require("../../config.json");
 
-
 module.exports = async () => {
   program
     .command("add <projectName>")
-    .description("初始化文件")
+    .description("添加 react 或 vue 文件")
     .option("-f, --force", "覆盖已存在的目标目录")
     .option("-r, --react", "创建 react 组件的文件夹")
     .option("-v, --vue", "创建 vue 组件的文件夹")
     .action(async (projectName, cmd) => {
       const options = cleanArgs(cmd);
-
       if (options.vue || config.mode === "vue") {
         return console.log(chalk.yellow("暂不支持创建 vue 组件的文件夹"));
       }
@@ -92,8 +90,6 @@ module.exports = async () => {
 
         await fs.copy(tempDir, targetDir).then(() => {
           ["index-fn.js", "index-class.js"].forEach(name => {
-            console.log("name", name);
-
             if (name === type) {
               fs.copySync(
                 path.resolve(targetDir, name),

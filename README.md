@@ -2,7 +2,6 @@
 
 Some common operations are simplified as commands.
 
-
 ## Install
 
 ```shell script

@@ -3,7 +3,8 @@ const program = require("commander");
 const commanders = {
   config: require("./config"),
   add: require("./add"),
-  publish: require("./publish")
+  publish: require("./publish"),
+  init: require("./init")
   // create: require("./create"),
   // build: require("./build"),
   // download: require("./download"),

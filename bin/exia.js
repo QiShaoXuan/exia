@@ -3,14 +3,14 @@ const chalk = require("chalk");
 const commanders = require("../commanders/index.js");
 const figlet = require("figlet");
 
-async function checkCliVersion() {
+async function runCommanders() {
   try {
     console.log(figlet.textSync("-- EXIA --"));
   } catch (e) {}
   commanders();
 }
 
-checkCliVersion().catch(e => {
+runCommanders().catch(e => {
   console.log(chalk.red("初始化失败"));
   console.log(chalk.yellow("检查版本："));
   Promise.all([
