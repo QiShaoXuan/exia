@@ -21,7 +21,15 @@
     "url": "https://github.com/QiShaoXuan/exia/issues"
   },
   "homepage": "https://github.com/QiShaoXuan/exia#readme",
-  "dependencies": {},
+  "dependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-cached": "^1.1.1",
+    "gulp-eslint": "^6.0.0",
+    "gulp-remember": "^1.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1"
+  },
   "engines": {
     "node": ">=13.0.0"
   },
