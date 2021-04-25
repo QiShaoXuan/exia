@@ -4,7 +4,7 @@
   "description": "",
   "main": "bin/index.js",
   "bin": {
-    "exia": "bin/index.js"
+    "ta": "bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,16 +22,21 @@
   },
   "homepage": "https://github.com/QiShaoXuan/exia#readme",
   "dependencies": {
+    "commander": "^7.2.0",
     "del": "^6.0.0",
+    "fs-extra": "^9.1.0",
     "gulp": "^4.0.2",
     "gulp-cached": "^1.1.1",
     "gulp-eslint": "^6.0.0",
     "gulp-remember": "^1.0.1",
     "gulp-rename": "^2.0.0",
-    "gulp-typescript": "^6.0.0-alpha.1"
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "semver": "^7.3.5",
+    "signale": "^1.4.0",
+    "simple-git": "^2.38.0"
   },
   "engines": {
-    "node": ">=13.0.0"
+    "node": ">=12.0.0"
   },
   "devDependencies": {
     "@leo/lint": "^0.0.2"
