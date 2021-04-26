@@ -31,6 +31,7 @@
     "gulp-remember": "^1.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
+    "inquirer": "^8.0.0",
     "semver": "^7.3.5",
     "signale": "^1.4.0",
     "simple-git": "^2.38.0"
