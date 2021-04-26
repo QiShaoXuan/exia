@@ -23,12 +23,15 @@ program
 program
   .command('publish')
   .description('发布项目至npm')
-  .option('-cv, --custom-version <version>', '更新指定版本到 package.json')
-  .option('-ngc, --nogitcheck', '不检查 git 状态', false)
+  .option('--custom-version <version>', '更新指定版本到 package.json')
+  .option('--no-gitcheck', '不检查 git 状态', false)
   .option('-p, --prereleaseId [prereleaseId]', '发布/更新预发布版本：beta, alpha, RC ...', 'beta')
-  .option('-nt, --notag', '是否使用 git tag', false)
-  .action((options) => {
-    require('../lib/publish')(options);
+  .option('--no-tag', '是否添加 git tag', false)
+  .option('--no-npm', '是否发布至 npm', false)
+  .action(async (options) => {
+    const Publisher = require('../lib/Publisher');
+    const publisher = new Publisher(options);
+    await publisher.publish();
   });
 
 program.parse(process.argv);
