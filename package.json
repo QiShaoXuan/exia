@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "leolint-scan": "leolint scan",
-    "leolint-fix": "leolint fix"
+    "f2elint-scan": "f2elint scan",
+    "f2elint-fix": "f2elint fix"
   },
   "repository": {
     "type": "git",
@@ -40,12 +40,12 @@
     "node": ">=12.0.0"
   },
   "devDependencies": {
-    "@leo/lint": "^0.0.2"
+    "f2elint": "^1.1.2"
   },
   "husky": {
     "hooks": {
-      "commit-msg": "leolint exec commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "leolint exec lint-staged"
+      "commit-msg": "f2elint commit-msg-scan",
+      "pre-commit": "f2elint commit-file-scan"
     }
   },
   "lint-staged": {
