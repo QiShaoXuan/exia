@@ -1,13 +1,15 @@
 {
   "name": "exia",
-  "version": "1.0.9",
+  "version": "2.0.0-beta.0",
   "description": "",
-  "main": "bin/exia.js",
+  "main": "bin/index.js",
   "bin": {
-    "exia": "bin/exia.js"
+    "exia": "bin/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "f2elint-scan": "f2elint scan",
+    "f2elint-fix": "f2elint fix"
   },
   "repository": {
     "type": "git",
@@ -20,22 +22,39 @@
   },
   "homepage": "https://github.com/QiShaoXuan/exia#readme",
   "dependencies": {
-    "camelize": "^1.0.0",
-    "chalk": "^4.1.0",
-    "commander": "^6.0.0",
-    "execa": "^4.0.3",
-    "figlet": "^1.5.0",
-    "fs-extra": "^9.0.1",
-    "inquirer": "^7.3.3",
-    "js-beautify": "^1.11.0",
-    "log-symbols": "^4.0.0",
-    "minimist": "^1.2.5",
-    "ora": "^4.0.5",
-    "pkg-dir": "^4.2.0",
-    "semver": "^7.3.2",
-    "simple-git": "^2.17.0"
+    "commander": "^7.2.0",
+    "del": "^6.0.0",
+    "fs-extra": "^9.1.0",
+    "gulp": "^4.0.2",
+    "gulp-cached": "^1.1.1",
+    "gulp-eslint": "^6.0.0",
+    "gulp-remember": "^1.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "inquirer": "^8.0.0",
+    "semver": "^7.3.5",
+    "signale": "^1.4.0",
+    "simple-git": "^2.38.0"
   },
   "engines": {
-    "node": ">=13.0.0"
+    "node": ">=12.0.0"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "f2elint": "^1.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "f2elint commit-msg-scan",
+      "pre-commit": "f2elint commit-file-scan"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,vue}": "leolint exec eslint"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

@@ -2,5 +2,6 @@ node_modules
 dist/
 .webpack_cache
 .idea/
-package-lock.json
 .vscode
+./lib
+./back
