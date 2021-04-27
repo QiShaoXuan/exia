@@ -23,9 +23,9 @@ program
 program
   .command('version')
   .description('更新版本号')
-  .option('--custom-version <version>', '更新指定版本到 package.json')
+  .option('--custom-version <version>', '自定义版本号')
   .option('--no-gitcheck', '不检查 git 状态', false)
-  .option('-p, --prereleaseId [prereleaseId]', '发布/更新预发布版本：beta, alpha, RC ...', 'beta')
+  .option('-p, --prereleaseId [prereleaseId]', '自定义预发版本前缀：beta, alpha, RC ...', 'beta')
   .option('--no-tag', '不添加 git tag', false)
   .action(async (options) => {
     const Version = require('../lib/Version');
