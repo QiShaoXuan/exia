@@ -5,7 +5,7 @@
 ## 使用
 
 ```shell script
-npm i exia -g
+sudo npm i exia -g
 
 exia <command> [options]
 ```
@@ -14,7 +14,9 @@ exia <command> [options]
 
 更新版本号
 
-检查 git 提交 => 升级 package.json 版本号 => git push => 添加 git tag
+```shell script
+exia version
+```
 
 ```
 Options:
