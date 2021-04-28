@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0",
+    "escape-string-regexp": "^5.0.0",
     "f2elint": "^1.1.2"
   },
   "husky": {
