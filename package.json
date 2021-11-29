@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "@exia/cli",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "bin": {
