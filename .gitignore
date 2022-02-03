@@ -3,5 +3,4 @@ dist/
 .webpack_cache
 .idea/
 .vscode
-./lib
-./back
+lib
